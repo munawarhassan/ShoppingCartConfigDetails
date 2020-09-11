@@ -1,0 +1,5 @@
+spring:  
+  datasource:   
+    data: classpath:/sql/import-h2.sql
+    
+greetProp: "Hello , I am ready for product inventory"
