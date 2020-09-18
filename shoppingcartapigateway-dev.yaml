@@ -1,5 +1,26 @@
-spring: 
-  datasource:   
-    data: classpath:/sql/import-h21.sql
+spring:
+  cloud:   
+   gateway:
+      routes:
+      - id: shoppingcartaudit
+        uri: lb://shoppingcartaudit
+        predicates:
+        - Path=/audit/**
+      - id: shoppingcartorder
+        uri: lb://shoppingcartorder
+        predicates:
+        - Path=/order/** 
+      - id: shoppingcartproductinventory
+        uri: lb://shoppingcartproductinventory
+        predicates:
+        - Path=/inventory/** 
+      - id: shoppingcartuser
+        uri: lb://shoppingcartuser
+        predicates:
+        - Path=/user/** 
+      - id: shoppingonweb
+        uri: lb://shoppingonweb
+        predicates:
+        - Path=/cart/** 
+      
 
-greetProp: "Hello , I am ready for shop online"
