@@ -21,6 +21,6 @@ spring:
       - id: shoppingonweb
         uri: lb://shoppingonweb
         predicates:
-        - Path=/cart/** 
+        - Path=/cart1/** 
       
 
