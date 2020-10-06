@@ -24,3 +24,8 @@ spring:
         - Path=/cart/** 
       
 
+okta:
+  oauth2:
+    issuer: https://dev-862382.okta.com/oauth2/default
+    client-id: 0oa128pyrthRSSYDd4x7
+    client-secret: ilY6LcsEN43IUV1bJ0ZcNWOza7HKp3XPjyF9KNi9
