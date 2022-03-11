@@ -22,5 +22,9 @@ spring:
         uri: lb://shoppingonweb
         predicates:
         - Path=/cart/** 
+      - id: shoppingonweb
+        uri: lb://shoppingcartapigateway
+        predicates:
+        - Path=/shoppingcartapigateway/** 
       
 
