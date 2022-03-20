@@ -9,7 +9,11 @@ spring:
       - id: shoppingcartorder
         uri: lb://shoppingcartorder
         predicates:
-        - Path=/order/** 
+        - Path=/order/**
+      - id: shoppingcartorderlogin
+        uri: lb://shoppingcartorder
+        predicates:
+        - Path=/public/** 
       - id: shoppingcartproductinventory
         uri: lb://shoppingcartproductinventory
         predicates:
